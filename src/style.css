@@ -1,0 +1,125 @@
+html {
+   scrollbar-width: thin;
+}
+
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+   background-color: white;
+   height: 50px;
+   position: fixed;
+   display: flex;
+   width: 100%;
+}
+.header {
+   width: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.lista-inicial {
+   display: flex;
+   gap: 1.5em;
+   padding: 0;
+   margin: 0;
+}
+
+/*#itemlista {
+   list-style: none;
+}*/
+a {
+   text-decoration: none;
+}
+.sessao-1 {
+   background-color: #5428ad;
+   height: 100dvh;
+   color: white;
+   padding-top: 50px;
+}
+
+button{
+   background-color: yellow;
+   border-radius: 5px;
+   border: none;
+   color:#5428ad;
+   margin: 8px;
+   
+   padding: 10px;
+}
+
+.info {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.info.container-1 {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.info.container-2 {
+   display: flex;
+   gap: 3rem;
+   padding: 3rem;
+}
+#img-maracatu{
+   max-width: 400px;
+   border-radius: 8px;
+    border: 3px #5428ad solid;
+}
+.info.container-3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.lista-artistas {
+   display: flex;
+   gap: 20px;
+}
+#item-img{
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+#box-artistas{
+   border: 3px #5428ad solid;
+   padding: 10px;
+   border-radius: 8px;
+}
+.info.container-4 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.lista-camarotes {
+   display: flex;
+   gap: 20px;
+   padding: 3em;
+}
+#box-ingresso{
+   border: 3px #5428ad solid;
+   padding: 10px;
+   border-radius: 8px;
+   height: 300px;
+}
+footer {
+   background-color: #5428ad;
+}
