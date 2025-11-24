@@ -29,306 +29,229 @@ body {
    color: var(--text);
 }
 
+a {
+   text-decoration: none;
+   color: var(--text);
+}
+
 header {
    background-color: var(--header-bg);
-   height: 50px;
+   height: 55px;
    position: fixed;
-   display: flex;
    width: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   z-index: 999;
+   padding: 0 15px;
 }
 
 .header {
    width: 100%;
-   max-width: 1000px;
+   max-width: 1100px;
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 
+#logo {
+   font-size: 1.6rem;
+   font-weight: bold;
+   color: var(--primary);
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   transition: 0.3s;
+}
+
 ul {
-   list-style: none;
    padding: 0;
    margin: 0;
 }
 
 .lista-inicial {
    display: flex;
-   gap: 1.5em;
-   padding: 0;
-   margin: 0;
+   gap: 2em;
 }
 
-a {
-   text-decoration: none;
+.lista-inicial a {
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.menu-btn {
+   display: none;
+   background: none;
+   border: none;
+   font-size: 2rem;
+   cursor: pointer;
    color: var(--text);
+}
+
+.theme-btn {
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+#dia-noite {
+   max-width: 25px;
 }
 
 .sessao-1 {
    background-color: var(--primary);
-   height: 100dvh;
-   color: var(--text);
-   padding-top: 50px;
+   padding-top: 80px;
+   text-align: center;
+   min-height: 100dvh;
 }
-#corInicial{
+
+#corInicial {
    color: white;
 }
 
-button {
+.compra_programacao button {
    background-color: var(--button-bg);
-   border-radius: 5px;
-   border: none;
    color: var(--button-text);
-   margin: 8px;
-   padding: 10px;
+   border: none;
+   padding: 10px 18px;
+   border-radius: 5px;
+   margin: 10px;
+   font-weight: bold;
+   cursor: pointer;
 }
 
-.info {
-   max-width: 1000px;
+.container-2 {
+   display: flex;
+   gap: 2rem;
+   max-width: 1100px;
    margin: 0 auto;
+   padding: 3rem 1rem;
 }
 
-.info.container-1 {
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-
-.info.container-2 {
-   display: flex;
-   gap: 3rem;
-   padding: 3rem;
-}
-
-#img-maracatu {
-   max-width: 400px;
+.img-container img {
+   width: 400px;
    border-radius: 8px;
    border: 3px solid var(--box-border);
-}
-
-.linha-tempo h3 {
-   margin: 20px 0 10px;
-}
-
-.linha-tempo ul li {
-   margin: 5px 0;
-}
-
-
-.info.container-3 {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
 }
 
 .lista-artistas {
    display: flex;
    gap: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
-#item-img {
-   width: 200px;
+.box-artistas {
+   border: 3px solid var(--box-border);
+   border-radius: 8px;
+   padding: 10px;
+   text-align: center;
+   width: 250px;
+}
+
+.box-artistas img {
+   width: 100%;
    height: 200px;
    object-fit: cover;
-   border-radius: 8px;
-}
-
-#box-artistas {
-   border: 3px solid var(--box-border);
-   padding: 10px;
-   border-radius: 8px;
-}
-
-.info.container-4 {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   border-radius: 6px;
 }
 
 .lista-camarotes {
    display: flex;
    gap: 20px;
+   justify-content: center;
+   flex-wrap: wrap;
    padding: 3em;
 }
 
-#box-ingresso {
+.box-ingresso {
    border: 3px solid var(--box-border);
-   padding: 10px;
    border-radius: 8px;
-   height: 300px;
+   padding: 15px;
+   width: 280px;
+   text-align: center;
+}
+
+.box-ingresso button {
+   margin-top: 10px;
+   background-color: var(--button-bg);
+   color: var(--button-text);
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
 }
 
 footer {
    background-color: var(--primary);
+   padding: 20px;
+   color: white;
+   text-align: center;
 }
 
-.produto {
-   display: flex;
-}
-
-#dia-noite{
-   max-width: 25px;
-}
+/* MOBILE */
 @media (max-width: 768px) {
 
-   header {
-      padding: 0 10px;
-      height: 55px;
-   }
-
-   .header {
-      gap: 10px;
-   }
-
-   nav {
+   .lista-inicial {
+      position: absolute;
+      top: 55px;
+      right: 0;
+      width: 100%;
+      background: var(--header-bg);
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
       display: none;
+   }
+
+   nav.menu-ativo .lista-inicial {
+      display: flex;
    }
 
    .menu-btn {
       display: block;
-      background: none;
-      border: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: var(--text);
    }
 
-   nav.menu-ativo {
-      display: flex;
-      position: absolute;
-      top: 55px;
-      right: 0;
-      background: var(--header-bg);
-      width: 100%;
-      padding: 20px 0;
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-      border-bottom: 2px solid var(--primary);
-   }
-
-   .lista-inicial {
-      flex-direction: column;
-      gap: 20px;
+   nav {
+      position: relative;
    }
 
    .sessao-1 {
-      padding: 70px 20px 20px;
-      height: auto;
-      text-align: center;
+      padding: 90px 20px 20px;
    }
 
-   .compra_programacao button {
-      width: 100%;
-      font-size: 1rem;
-   }
-
-   .info.container-2 {
+   .container-2 {
       flex-direction: column;
-      padding: 1.5rem;
-      gap: 1.5rem;
       text-align: center;
    }
 
    .img-container img {
       width: 100%;
       max-width: 350px;
-      border-radius: 8px;
+      margin: 0 auto;
    }
 
-   .info.container-2 ul {
-      padding: 0;
-   }
-
-   .info.container-2 li {
-      margin-bottom: 15px;
-   }
-
-   .lista-artistas {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   #box-artistas {
+   .box-artistas {
       width: 90%;
-      text-align: center;
    }
 
-   #item-img {
-      width: 100%;
-      height: auto;
-   }
-
-   .lista-camarotes {
-      flex-direction: column;
-      padding: 1.5em;
-      gap: 25px;
-   }
-
-   #box-ingresso {
-      width: 100%;
-      min-height: auto;
-   }
-
-   footer {
-      padding: 20px;
-      text-align: center;
-   }
-
-   footer ul {
-      padding: 0;
-   }
-
-   footer li {
-      margin: 8px 0;
+   .box-ingresso {
+      width: 90%;
    }
 }
 
+/* EXTRA PEQUENO */
 @media (max-width: 480px) {
    h1 {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
    }
 
    h2 {
       font-size: 1.2rem;
    }
-
-   .compra_programacao {
-      flex-direction: column;
-   }
-
-   .compra_programacao button {
-      width: 100%;
-   }
-}
-.subtitulo-topo {
-   font-size: 1.2rem;
-   font-weight: bold;
-   margin-bottom: 10px;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-}
-
-.descricao-topo {
-   max-width: 600px;
-   text-align: center;
-   margin: 10px 0 20px;
-   font-size: 1.1rem;
-   line-height: 1.5rem;
-}
-
-.cronometro {
-   margin: 20px 0;
-   text-align: center;
-}
-
-#timer {
-   font-size: 1.8rem;
-   font-weight: bold;
-   margin: 10px 0;
-   color: yellow;
 }
