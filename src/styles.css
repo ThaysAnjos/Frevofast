@@ -1,0 +1,334 @@
+:root {
+   --bg: #ffffff;
+   --text: #000000;
+   --header-bg: #ffffff;
+   --primary: #5428ad;
+   --button-bg: yellow;
+   --button-text: #5428ad;
+   --box-border: #5428ad;
+}
+
+[data-theme="dark"] {
+   --bg: #0e0e0e;
+   --text: #ffffff;
+   --header-bg: #1a1a1a;
+   --primary: #7c5cff;
+   --button-bg: #ffd600;
+   --button-text: #000000;
+   --box-border: #7c5cff;
+}
+
+html {
+   scrollbar-width: thin;
+}
+
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: var(--bg);
+   color: var(--text);
+}
+
+header {
+   background-color: var(--header-bg);
+   height: 50px;
+   position: fixed;
+   display: flex;
+   width: 100%;
+}
+
+.header {
+   width: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.lista-inicial {
+   display: flex;
+   gap: 1.5em;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: var(--text);
+}
+
+.sessao-1 {
+   background-color: var(--primary);
+   height: 100dvh;
+   color: var(--text);
+   padding-top: 50px;
+}
+#corInicial{
+   color: white;
+}
+
+button {
+   background-color: var(--button-bg);
+   border-radius: 5px;
+   border: none;
+   color: var(--button-text);
+   margin: 8px;
+   padding: 10px;
+}
+
+.info {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.info.container-1 {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.info.container-2 {
+   display: flex;
+   gap: 3rem;
+   padding: 3rem;
+}
+
+#img-maracatu {
+   max-width: 400px;
+   border-radius: 8px;
+   border: 3px solid var(--box-border);
+}
+
+.linha-tempo h3 {
+   margin: 20px 0 10px;
+}
+
+.linha-tempo ul li {
+   margin: 5px 0;
+}
+
+
+.info.container-3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.lista-artistas {
+   display: flex;
+   gap: 20px;
+}
+
+#item-img {
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+#box-artistas {
+   border: 3px solid var(--box-border);
+   padding: 10px;
+   border-radius: 8px;
+}
+
+.info.container-4 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.lista-camarotes {
+   display: flex;
+   gap: 20px;
+   padding: 3em;
+}
+
+#box-ingresso {
+   border: 3px solid var(--box-border);
+   padding: 10px;
+   border-radius: 8px;
+   height: 300px;
+}
+
+footer {
+   background-color: var(--primary);
+}
+
+.produto {
+   display: flex;
+}
+
+#dia-noite{
+   max-width: 25px;
+}
+@media (max-width: 768px) {
+
+   header {
+      padding: 0 10px;
+      height: 55px;
+   }
+
+   .header {
+      gap: 10px;
+   }
+
+   nav {
+      display: none;
+   }
+
+   .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: var(--text);
+   }
+
+   nav.menu-ativo {
+      display: flex;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      background: var(--header-bg);
+      width: 100%;
+      padding: 20px 0;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      border-bottom: 2px solid var(--primary);
+   }
+
+   .lista-inicial {
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .sessao-1 {
+      padding: 70px 20px 20px;
+      height: auto;
+      text-align: center;
+   }
+
+   .compra_programacao button {
+      width: 100%;
+      font-size: 1rem;
+   }
+
+   .info.container-2 {
+      flex-direction: column;
+      padding: 1.5rem;
+      gap: 1.5rem;
+      text-align: center;
+   }
+
+   .img-container img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 8px;
+   }
+
+   .info.container-2 ul {
+      padding: 0;
+   }
+
+   .info.container-2 li {
+      margin-bottom: 15px;
+   }
+
+   .lista-artistas {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   #box-artistas {
+      width: 90%;
+      text-align: center;
+   }
+
+   #item-img {
+      width: 100%;
+      height: auto;
+   }
+
+   .lista-camarotes {
+      flex-direction: column;
+      padding: 1.5em;
+      gap: 25px;
+   }
+
+   #box-ingresso {
+      width: 100%;
+      min-height: auto;
+   }
+
+   footer {
+      padding: 20px;
+      text-align: center;
+   }
+
+   footer ul {
+      padding: 0;
+   }
+
+   footer li {
+      margin: 8px 0;
+   }
+}
+
+@media (max-width: 480px) {
+   h1 {
+      font-size: 1.7rem;
+   }
+
+   h2 {
+      font-size: 1.2rem;
+   }
+
+   .compra_programacao {
+      flex-direction: column;
+   }
+
+   .compra_programacao button {
+      width: 100%;
+   }
+}
+.subtitulo-topo {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.descricao-topo {
+   max-width: 600px;
+   text-align: center;
+   margin: 10px 0 20px;
+   font-size: 1.1rem;
+   line-height: 1.5rem;
+}
+
+.cronometro {
+   margin: 20px 0;
+   text-align: center;
+}
+
+#timer {
+   font-size: 1.8rem;
+   font-weight: bold;
+   margin: 10px 0;
+   color: yellow;
+}

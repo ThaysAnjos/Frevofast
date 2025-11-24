@@ -5,11 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#FFFFF">
 	<script src="./src/main.js" type="module" defer></script>
-	<link rel="stylesheet" href="./src/style.css">
+	<link rel="stylesheet" href="./src/styles.css">
 	<title>FrevoFast Project</title>
 </head>
 <body>
+
    <header>
+      <button onclick="toggleTheme()"><img id="dia-noite" src="./public/assets/img/dia-e-noite.png" alt=""></button>
+
       <div class="header">
          <span id="logo">FrevoFast</span>
          <nav>
@@ -30,69 +33,70 @@
          </nav>
       </div>
    </header>
-   
+
    <main>
       <section class="sessao-1">
          <div class="info container-1">
-            <h1>A Magia do Carnaval de Rua</h1>
-            <h2>Venha viver o maior carnaval em linha reta do mundo. Frevo, Maracatu e muita alegria nas ruas do Recife Antigo.</h2>
-            
-            <div class="dataElocao">
-               <span>Fev 28 - Mar 05</span>
-               <span>Marco Zero, Recife - PE</span>  
+
+            <span id="corInicial" class="subtitulo-topo">O Recife Pulsa. O Frevo Chama.</span>
+
+            <h1 id="corInicial">Viva o Carnaval Onde Tudo Ferve</h1>
+
+            <p id="corInicial" class="descricao-topo">
+               O maior carnaval em linha reta do mundo.
+               Cultura, música, tradição e energia que contagia.
+            </p>
+
+            <div id="corInicial" class="cronometro">
+               <h3 id="corInicial">Faltam</h3>
+               <div id="corInicial" id="timer"></div>
+               <spanid="corInicial">para o Carnaval do Recife 2026</span>
             </div>
-            
+
             <div class="compra_programacao">
-               <button>Comprar Camorote</button>
+               <button>Comprar Camarote</button>
                <button>Ver Programação</button>
             </div>
          </div>
       </section>
-      
+
       <section class="sessao-2">
          <div class="info container-2">
             <div class="img-container">
-               <img id="img-maracatu" src="./public/assets/img/maracatu1.jpg" alt="temporaria" draggable="false">
+               <img
+                 id="preview"
+                 src="./public/assets/img/maracatu1.jpg"
+                 onmouseover="trocarParaGif()"
+                onmouseout="voltarImagem()"
+                 >
+
             </div>
-            
+
             <div>
                <span>A Cultura</span>
                <h2>O Frevo Ferve na Alma do Recife</h2>
                <p>O Carnaval do Recife é democrático, cultural e diverso. Do Galo da Madrugada, o maior bloco do mundo, aos palcos descentralizados, a cidade respira história. Aqui, o guarda-chuva colorido não protege da chuva, ele é a espada do passista que desafia a gravidade.</p>
-               
-               <ul>
-                  <li>
-                     <div>
-                        <!-- logo.svg -->
-                     </div>
-                     <h3>O Frevo</h3>
-                     <p>Patrimônio Imaterial da Humanidade, ritmo acelerado que comanda as multidões.</p>
-                  </li>
-                  <li>
-                     <div>
-                        <!-- logo.svg -->
-                     </div>
-                     <h3>Maracatu</h3>
-                     <p>O batuque ancestral das Nações de Maracatu que ecoa a herança africana.</p>
-                  </li>
-                  <li>
-                     <div>
-                        <!-- logo.svg -->
-                     </div>
-                     <h3>Multicultural</h3>
-                     <p>Rock, Samba, Pop e Manguebeat se encontram no Marco Zero.</p>
-                  </li>
-               </ul>
+
+               <div class="linha-tempo">
+                  <h3>Linha do Tempo do Frevo</h3>
+                  <ul>
+                     <li><strong>1907</strong> — Primeiros registros oficiais do Frevo</li>
+                     <li><strong>1930</strong> — Surgimento dos Passistas</li>
+                     <li><strong>2012</strong> — Frevo vira Patrimônio Imaterial da Humanidade</li>
+                     <li><strong>Hoje</strong> — Símbolo máximo do carnaval pernambucano</li>
+                  </ul>
+               </div>
+
             </div>
          </div>
       </section>
-      
+
       <section class="sessao-3">
          <div  class="info container-3">
             <span>Programação Principal</span>
             <h2>Grandes Encontros</h2>
             <h3>O palco do Marco Zero recebe as maiores estrelas da música pernambucana e nacional</h3>
-            
+
             <ul class="lista-artistas">
                <li id="box-artistas">
                   <img id="item-img" src="./public/assets/img/Alceu.jpg" alt="">
@@ -125,12 +129,12 @@
             </ul>
          </div>
       </section>
-      
+
       <section class="sessao4">
          <div class="info container-4">
             <h2>Garanta seu Conforto</h2>
             <h3>O carnaval de rua é gratuito para todos! Mas se você prefere uma experiência exclusiva com conforto e serviços premium, confira nossos camarotes</h3>
-            
+
             <ul class="lista-camarotes">
                <li id="box-ingresso">
                   <h3>Camarote VIP</h3>
@@ -169,15 +173,48 @@
          </div>
       </section>
    </main>
-   
+
    <footer>
       <span>FrevoFast</span>
       <ul>
          <li>Contatos</li>
          <li>Nossas mídias</li>
          <li>Seja nosso patrocinador</li>
-         <li>Parceiros e Contribuidores</li>
+         <li>Parceiros e Contribuidores <a href="https://www.flaticon.com/br/icones-gratis/dia-e-noite" title="dia e noite ícones">Dia e noite ícones criados por surang - Flaticon</a></li>
       </ul>
    </footer>
+   <script>
+   
+   function toggleTheme() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+   }
+   
+   // tentando fazer cronometro
+   // function atualizarTimer() {
+   //    const alvo = new Date("2026-02-28T00:00:00").getTime();
+   //    const agora = new Date().getTime();
+   //    const diff = alvo - agora;
+   
+   //    if (diff <= 0) {
+   //       document.getElementById("timer").innerHTML = "É HOJE! Viva o Carnaval!";
+   //       return;
+   //    }
+   
+   //    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+   //    const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   //    const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+   //    const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+   
+   //    document.getElementById("timer").innerHTML =
+   //       `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+   // }
+   
+   // setInterval(atualizarTimer, 1000);
+   // atualizarTimer();
+   
+   </script>
+
+
 </body>
 </html>
