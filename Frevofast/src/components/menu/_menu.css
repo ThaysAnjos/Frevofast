@@ -1,0 +1,23 @@
+.menu-modal {
+   position: fixed;
+   transition: ease-in 0.5s;
+}
+
+.menu-modal.hidden {
+   left: -50%;
+   
+}
+
+.menu-modal.active {
+   left: 0;
+}
+
+.menu-content {
+   background:white;
+   padding: 2rem;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
