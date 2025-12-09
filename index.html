@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#FFFFFF">
+   <link rel="stylesheet" href="./src/styles.css">
+   <script defer src="./src/main.js"></script>
+   <title>FrevoFast Project</title>
+</head>
+
+<body>
+
+<header>
+   <button class="theme-btn" onclick="toggleTheme()">
+      <img id="dia-noite" src="./public/assets/img/dia-e-noite.png" alt="">
+   </button>
+
+   <div class="header">
+      <span id="logo">FrevoFast</span>
+
+      <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+      <nav id="menu">
+         <ul class="lista-inicial">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./public/pages/historia.html">História</a></li>
+            <li><a href="./public/pages/programacao.html">Programação</a></li>
+            <li><a href="./public/pages/loja.html">Loja</a></li>
+         </ul>
+      </nav>
+   </div>
+</header>
+
+<main>
+
+   <section class="sessao-1">
+      <div class="info container-1">
+
+         <span id="corInicial" class="subtitulo-topo">O Recife Pulsa. O Frevo Chama.</span>
+
+         <h1 id="corInicial">Viva o Carnaval Onde Tudo Ferve</h1>
+
+         <p id="corInicial" class="descricao-topo">
+            O maior carnaval em linha reta do mundo. Cultura, música, tradição e energia que contagia.
+         </p>
+
+         <div class="cronometro">
+            <h3 id="corInicial">Faltam</h3>
+            <div id="timer"></div>
+            <span id="corInicial">para o Carnaval do Recife 2026</span>
+         </div>
+
+         <div class="compra_programacao">
+            <a href="./public/pages/loja.html"><button type="button">Comprar Camarote</button></a>
+           <a href="./public/pages/programacao.html"><button type="button">Ver Programação</button></a>
+         </div>
+
+      </div>
+   </section>
+
+   <section class="sessao-2">
+      <div class="info container-2">
+
+         <div class="img-container">
+            <img id="preview" src="./public/assets/img/maracatu1.jpg"
+            onmouseover="trocarParaGif()" onmouseout="voltarImagem()">
+         </div>
+
+         <div>
+            <span class="cultura-topo">A Cultura</span>
+            <h2>O Frevo Ferve na Alma do Recife</h2>
+
+            <p>
+               O Carnaval do Recife é democrático, cultural e diverso. Do Galo da Madrugada aos palcos
+               descentralizados, a cidade respira história. O guarda-chuva colorido é símbolo de resistência
+               e alegria.
+            </p>
+
+            <div class="linha-tempo">
+               <h3>Linha do Tempo do Frevo</h3>
+               <ul type="none">
+                  <li><strong>1907</strong> — Primeiros registros oficiais</li>
+                  <li><strong>1930</strong> — Surgimento dos Passistas</li>
+                  <li><strong>2012</strong> — Patrimônio Imaterial da Humanidade</li>
+                  <li><strong>Hoje</strong> — Símbolo máximo do carnaval pernambucano</li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <section class="sessao-3">
+      <div class="info container-3">
+         <h2 id="center">Grandes Encontros</h2>
+         <h3 id="center">O Marco Zero recebe as maiores estrelas do país</h3>
+
+         <ul class="lista-artistas" type="none">
+
+            <li class="box-artistas">
+               <img src="./public/assets/img/Alceu.jpg">
+               <div>Sexta • 23:00</div>
+               <h2>Alceu Valença</h2>
+               <span>MPB / Frevo - </span>
+               <span>Marco Zero</span>
+            </li>
+
+            <li class="box-artistas">
+               <img src="./public/assets/img/Lenine.jpg">
+               <div>Sábado • 21:00</div>
+               <h2>Lenine</h2>
+               <span>Rock / MPB -</span>
+               <span>Marco Zero</span>
+            </li>
+
+            <li class="box-artistas">
+               <img src="./public/assets/img/joaoGomes.jpg">
+               <div>Domingo • 22:30</div>
+               <h2>João Gomes</h2>
+               <span>Forró -</span>
+               <span>Marco Zero</span>
+            </li>
+
+            <li class="box-artistas">
+               <img src="./public/assets/img/nacaozumbi.jpg">
+               <div>Segunda • 00:00</div>
+               <h2>Nação Zumbi</h2>
+               <span>Manguebeat -</span>
+               <span>Praça do Arsenal</span>
+            </li>
+
+         </ul>
+
+      </div>
+   </section>
+
+   <section class="sessao4">
+      <div class="info container-4">
+
+         <h2 id="center">Garanta seu Conforto</h2>
+         <h3 id="center">Experiências exclusivas para aproveitar o carnaval ao máximo</h3>
+
+         <ul class="lista-camarotes">
+
+            <li class="box-ingresso">
+               <h3>Camarote VIP</h3>
+               <span>R$250 / dia</span>
+               <ul>
+                  <li>Open Bar Standard</li>
+                  <li>Banheiros Exclusivos</li>
+                  <li>Abadá Personalizado</li>
+               </ul>
+               <a href="./public/pages/loja.html"><button>Garanta Agora</button></a>
+            </li>
+
+            <li class="box-ingresso">
+               <h3>Camarote Premium</h3>
+               <span>R$550 / dia</span>
+               <ul>
+                  <li>Open Bar Completo</li>
+                  <li>Vista Privilegiada</li>
+                  <li>Abadá Premium</li>
+               </ul>
+               <a href="./public/pages/loja.html"><button>Garanta Agora</button></a>
+            </li>
+
+            <li class="box-ingresso">
+               <h3>Camarote Plus</h3>
+               <span>R$390 / dia</span>
+               <ul>
+                  <li>Open Bar Standard</li>
+                  <li>Vista VIP</li>
+                  <li>Abadá Personalizado</li>
+               </ul>
+               <a href="./public/pages/loja.html"><button>Garanta Agora</button></a>
+            </li>
+
+         </ul>
+
+      </div>
+   </section>
+
+</main>
+
+<footer>
+   <span>FrevoFast</span>
+   <ul>
+      <li>Contatos</li>
+      <li>Nossas mídias</li>
+      <li>Patrocínios</li>
+   </ul>
+</footer>
+
+<script>
+function toggleTheme() {
+   const html = document.documentElement;
+   html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+}
+
+function abrirMenu() {
+   document.getElementById("menu").classList.toggle("menu-ativo");
+}
+
+function atualizarTimer() {
+   const alvo = new Date("2026-02-14T00:00:00").getTime();
+   const agora = new Date().getTime();
+   const diff = alvo - agora;
+
+   if (diff <= 0) {
+      timer.innerHTML = "É HOJE! Viva o Carnaval!";
+      return;
+   }
+
+   const dias = Math.floor(diff / 86400000);
+   const horas = Math.floor((diff % 86400000) / 3600000);
+   const minutos = Math.floor((diff % 3600000) / 60000);
+   const segundos = Math.floor((diff % 60000) / 1000);
+
+   timer.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+}
+
+setInterval(atualizarTimer, 1000);
+atualizarTimer();
+</script>
+
+</body>
+</html>
